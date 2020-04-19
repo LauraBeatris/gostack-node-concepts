@@ -1,6 +1,7 @@
-const request = require("supertest");
-const app = require("../app");
-const { isUuid } = require("uuidv4");
+import request from 'supertest'
+import app from '../app'
+import { isUuid } from 'uuidv4'
+import Repository from '../interfaces/Repository';
 
 describe("Repositories", () => {
   it("should be able to create a new repository", async () => {
@@ -109,7 +110,7 @@ describe("Repositories", () => {
 
     const repositories = await request(app).get("/repositories");
 
-    const repository = repositories.body.find((r) => r.id === response.body.id);
+    const repository = repositories.body.find((r: Repository) => r.id === response.body.id);
 
     expect(repository).toBe(undefined);
   });

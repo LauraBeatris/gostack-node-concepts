@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "dir/server.js",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
@@ -13,8 +13,14 @@
     "uuidv4": "^6.0.7"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/jest": "^25.2.1",
+    "@types/supertest": "^2.0.8",
     "jest": "^25.2.6",
     "nodemon": "^2.0.2",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   }
 }
